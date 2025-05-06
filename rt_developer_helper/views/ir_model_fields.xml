@@ -8,7 +8,7 @@
             <field name="inherit_id" ref="base.view_model_fields_tree"/>
             <field name="priority" eval="8"/>
             <field name="arch" type="xml">
-                <xpath expr="//tree" position="attributes">
+                <xpath expr="//list" position="attributes">
                     <attribute name="limit">1000</attribute>
                 </xpath>
                 <xpath expr="//field[@name='model_id']" position="before">

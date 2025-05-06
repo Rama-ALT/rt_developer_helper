@@ -9,7 +9,7 @@
             <field name="priority" eval="8"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='name']" position="after">
-                    <field name="xml_id"/>
+                    <field name="rt_xml_id" optional="show"/>
                 </xpath>
             </field>
         </record>
@@ -21,7 +21,19 @@
             <field name="priority" eval="8"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='name']" position="after">
-                    <field name="xml_id"/>
+                    <field name="rt_xml_id" optional="show"/>
+                </xpath>
+            </field>
+        </record>
+    
+        <record id="ir_model_access_developer_helper_form_inherit" model="ir.ui.view">
+            <field name="name">ir_model_access_developer_helper.form</field>
+            <field name="model">ir.model.access</field>
+            <field name="inherit_id" ref="base.ir_access_view_form"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="rt_xml_id"/>
                 </xpath>
             </field>
         </record>
